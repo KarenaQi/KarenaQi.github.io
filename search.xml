@@ -18,4 +18,21 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Django</title>
+    <url>/2020/10/11/Django/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven</title>
+    <url>/2020/10/11/Maven/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/xxaann/article/details/104794669">jar包问题</a></p>
+]]></content>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
 </search>
