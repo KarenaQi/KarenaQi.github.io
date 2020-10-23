@@ -35,4 +35,72 @@
         <tag>Web</tag>
       </tags>
   </entry>
+  <entry>
+    <title>page</title>
+    <url>/2020/10/17/C/</url>
+    <content><![CDATA[<p>编译器：把源代码转换成可执行代码的程序</p>
+<p>可执行代码：用计算机的机器语言表示的代码，由数字码表示的指令组成</p>
+<p>C编译器负责把C代码翻译成特定的机器语言</p>
+<p>C编译器还将源代码与C库（库中包含大量的标准函数供用户使用，如printf和scanf）的代码合并成最终的程序，【精确说法：由一个被称为链接器的程序来链接库函数，但在大多数系统中，编译器运行链接器】结果是：生成一个用户可以运行的可执行文件，其中包含着计算机能理解的代码。</p>
+<p>编译器还会检查C语言程序是否有效，如果C编译器发现错误，就不生成可执行文件并报错。</p>
+<p>C编程的基本策略是：用程序把源代码文件转换为可执行文件；典型的C实现通过编译和链接两个步骤来完成这一过程。编译器把源代码转换成中间代码，链接器把中间代码和其他代码合并，生成可执行文件。                                                                                   </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; //包含另一个文件，告诉编译器把stdio.h中的内容包含在当前程序中，</span></span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">stdio.h是C编译器软件包的标准部分，提供键盘输入和屏幕输出的支持</span></span><br><span class="line"><span class="comment">作用：相当于把stdio.h文件中的所有内容都输入该行所在的位置；实际上这是一种拷贝-粘贴的操作，include提供了一种方便的途径共享许多程序共有的信息</span></span><br><span class="line"><span class="comment">这行代码是一条C预处理器指令，通常C编译器在编译前会对源代码做一些准备工作，即预处理</span></span><br><span class="line"><span class="comment">大多数情况下，头文件包含了编译器创建最终可执行程序要用到的信息，头文件帮助编译器把你的程序正确的组合在一起</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">函数是C程序的基本模块</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="comment">/*在C语言中，所有变量必须先声明才能使用，即必须列出程序中用到的所有变量名及类型*/</span></span><br><span class="line">  <span class="keyword">int</span> num;<span class="comment">//声明</span></span><br><span class="line">  num = <span class="number">1</span>;<span class="comment">//赋值表达式语句</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;I am a simple&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;computer.\n&quot;</span>);<span class="comment">//&quot;\n&quot;告诉计算机另起一行，即把光标移至下一行</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;my favorite color is %d because it is first.\n&quot;</span>, num);<span class="comment">//“%d”告诉计算机以何种形式输出num的值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> weight;</span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Are you worth your weight in plantinum?\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;let&#x27; s check it out!\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter your weight in pounds: &quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;weight);</span><br><span class="line">  	<span class="comment">/*</span></span><br><span class="line"><span class="comment">  	scanf函数用于读取键盘的输入，“%f”说明读取用户从键盘输入的浮点数，&amp;weight告诉scanf()把输入的值赋给名为weight的变量。使用&amp;符号表明找到weight变量的地点。</span></span><br><span class="line"><span class="comment">  	*/</span></span><br><span class="line"></span><br><span class="line">    value = <span class="number">1700.0</span> * weight * <span class="number">14.5833</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your weight in plantium is worth $%.2f.\n&quot;</span>, value);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">getchar()函数读取下一个输入字符，因此程序会等待用户输入，</span></span><br><span class="line"><span class="comment">用户键入156并按下enter键（即发送一个换行符）</span></span><br><span class="line"><span class="comment">然后scanf()读取键入的数字，第一个getchar()读取换行符，第二个getchar()让程序暂停，等待输入</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> c[] = <span class="string">&quot;I am a teacher&quot;</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(a,c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;c = %s\n&quot;</span>, c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %s\n&quot;</span>, a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">C语言里面复制字符串的库函数, 函数声明包括在专门处理字符串的头文件&lt;string.h&gt;中</span></span><br><span class="line"><span class="comment">char * strcpy( char * dst, const char * src );</span></span><br><span class="line"><span class="comment">这个函数把字符串src复制到一分配好的字符串空间dst中，复制的时候包括标志字符串结尾的空字符一起复制。</span></span><br><span class="line"><span class="comment">操作成功，返回dst，否则返回NULL.</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/cprogramming/c-function-malloc.html">C 库函数 <strong>void *malloc(size_t size)</strong> 分配所需的内存空间，并返回一个指向它的指针。</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>OS</title>
+    <url>/2020/10/12/OS/</url>
+    <content><![CDATA[<h1 id="OS实验一：进程通信实验"><a href="#OS实验一：进程通信实验" class="headerlink" title="OS实验一：进程通信实验"></a>OS实验一：进程通信实验</h1><h2 id="一-消息传递"><a href="#一-消息传递" class="headerlink" title="一.消息传递"></a>一.消息传递</h2><p>消息队列是内核地址空间中的内部链表，通过Linux内核在各个进程之间传递内容，内核中的消息队列是通过IPC的标识符来区别的，不同的消息队列之间是相对独立的。</p>
+<p>每个消息队列中的消息又构成一个独立链表。</p>
+<p>消息队列提供了一个从一个进程向另一个进程发送数据块的方法。每个数据块都被认为含有一个类型，接收进程可以独立的接收含有不同类型的数据结构。</p>
+<p>我们可以通过发送消息来避免命名管道的同步和阻塞问题。但是消息队列与命名管道一样，每个数据块都有一个最大长度的限制，消息总的大小不能超过8192个字节。</p>
+<h2 id="二-共享内存"><a href="#二-共享内存" class="headerlink" title="二.共享内存"></a>二.共享内存</h2><h3 id="共享内存使用的函数"><a href="#共享内存使用的函数" class="headerlink" title="共享内存使用的函数"></a>共享内存使用的函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmget</span><span class="params">(<span class="keyword">key_t</span> key,<span class="keyword">size_t</span> size, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">shmat</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">const</span> <span class="keyword">void</span> *shm_addr, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmdt</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *shm_addr)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmctl</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">int</span> cmd, struct shmid_ds *buf)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>int shmget(key_t <strong>key</strong>,size_t <strong>size</strong>, int <strong>shmflg</strong>);<ul>
+<li><strong>key</strong>：和信号量一样，程序需要提供一个参数key，它有效的为共享内存段命名。</li>
+<li><strong>size</strong>：以字节为单位指定需要共享的内存容量</li>
+<li><strong>shmflg</strong>：</li>
+</ul>
+</li>
+</ol>
+<h1 id="CPU调度概述"><a href="#CPU调度概述" class="headerlink" title="CPU调度概述"></a>CPU调度概述</h1><p>多任务操作系统的基础，目的是使得CPU尽可能用于执行指令，从而提高CPU效率</p>
+<ol>
+<li>长程和短程调度</li>
+<li>调度队列</li>
+<li>中程调度</li>
+<li>CPU脉冲周期</li>
+<li>调度方式</li>
+<li>调度过程和时机</li>
+<li>调度准则</li>
+</ol>
+<h6 id="CPU调度分为长程调度和短程调度"><a href="#CPU调度分为长程调度和短程调度" class="headerlink" title="CPU调度分为长程调度和短程调度"></a>CPU调度分为长程调度和短程调度</h6><p>运行状态图中，有些状态的转换时必然的：运行状态完成的状态必然转换为结束状态，而有些状态的转换需要CPU的干预，因为进程间存在着一定的竞争，需要OS<strong>选择</strong>一个进程来进行这种转换，这种选择称为CPU调度。</p>
+<h2 id="长程调度"><a href="#长程调度" class="headerlink" title="长程调度"></a>长程调度</h2><p>“道”：允许在内存中运行的最多进程数</p>
+<p>由于CPU内存的硬件资源和性能是有限的，运行在其上的进程不能无限大</p>
+<p>并不是每个用户创建的进程都能够马上被装入内存并运行</p>
+<p>![image-20201014203834953](/Users/xueqi/Library/Application Support/typora-user-images/image-20201014203834953.png)</p>
+<p>![image-20201014212435127](/Users/xueqi/Library/Application Support/typora-user-images/image-20201014212435127.png)</p>
+<p>![image-20201014223842281](/Users/xueqi/Library/Application Support/typora-user-images/image-20201014223842281.png)</p>
+<p>![image-20201015101544648](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015101544648.png)</p>
+<p>![image-20201015112301870](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015112301870.png)</p>
+<p>![image-20201015113500787](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015113500787.png)</p>
+<p>![image-20201015125801021](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015125801021.png)</p>
+<p>![image-20201015211058475](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015211058475.png)</p>
+<p>![image-20201015214900528](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015214900528.png)</p>
+<p>![image-20201015220813553](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015220813553.png)</p>
+<p>![image-20201015234239536](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015234239536.png)</p>
+<p>![image-20201015235207708](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015235207708.png)</p>
+<h1 id="第六章-进程同步"><a href="#第六章-进程同步" class="headerlink" title="第六章 进程同步"></a>第六章 进程同步</h1><h1 id="6-1临界区"><a href="#6-1临界区" class="headerlink" title="6.1临界区"></a>6.1临界区</h1><p>多道程序设计技术是现代操作系统运行的基础，在进程并发执行时，各个协通进程运行次序的不同会导致不同的运行结果，从而出现运行错误。</p>
+<p>同步和互斥技术保证在并发条件下进程运行的正确，一致性</p>
+<h2 id="竞争条件和临界区"><a href="#竞争条件和临界区" class="headerlink" title="竞争条件和临界区"></a>竞争条件和临界区</h2><h2 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h2><h2 id="生产者消费问题"><a href="#生产者消费问题" class="headerlink" title="生产者消费问题"></a>生产者消费问题</h2><h2 id="读者写着问题"><a href="#读者写着问题" class="headerlink" title="读者写着问题"></a>读者写着问题</h2><h2 id="哲学家就餐问题"><a href="#哲学家就餐问题" class="headerlink" title="哲学家就餐问题"></a>哲学家就餐问题</h2><h2 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h2>]]></content>
+      <tags>
+        <tag>底层</tag>
+      </tags>
+  </entry>
 </search>
