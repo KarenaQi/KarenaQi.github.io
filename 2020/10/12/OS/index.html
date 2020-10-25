@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="OS实验一：进程通信实验一.消息传递消息队列是内核地址空间中的内部链表，通过Linux内核在各个进程之间传递内容，内核中的消息队列是通过IPC的标识符来区别的，不同的消息队列之间是相对独立的。 每个消息队列中的消息又构成一个独立链表。 消息队列提供了一个从一个进程向另一个进程发送数据块的方法。每个数据块都被认为含有一个类型，接收进程可以独立的接收含有不同类型的数据结构。 我们可以通过发送消息来避免">
+  <meta name="description" content="1ps -ef |grep - 列出需要进程  OS实验一：进程通信实验一.管道和FIFO&#x2F;命名管道最适合在进程之间实现生产者&#x2F;消费者的交互。有些进程往管道里写数据，而另一些进程则从管道中读出数据。 在Linux中，popen()和pclose()都包含在C函数库中，popen()函数接收两个参数：可执行文件路径名filename和定义数据传输方向的字符串type。该函数返回一个指向FILE数据结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OS">
 <meta property="og:url" content="http://example.com/2020/10/12/OS/index.html">
 <meta property="og:site_name" content="青墨山音">
-<meta property="og:description" content="OS实验一：进程通信实验一.消息传递消息队列是内核地址空间中的内部链表，通过Linux内核在各个进程之间传递内容，内核中的消息队列是通过IPC的标识符来区别的，不同的消息队列之间是相对独立的。 每个消息队列中的消息又构成一个独立链表。 消息队列提供了一个从一个进程向另一个进程发送数据块的方法。每个数据块都被认为含有一个类型，接收进程可以独立的接收含有不同类型的数据结构。 我们可以通过发送消息来避免">
+<meta property="og:description" content="1ps -ef |grep - 列出需要进程  OS实验一：进程通信实验一.管道和FIFO&#x2F;命名管道最适合在进程之间实现生产者&#x2F;消费者的交互。有些进程往管道里写数据，而另一些进程则从管道中读出数据。 在Linux中，popen()和pclose()都包含在C函数库中，popen()函数接收两个参数：可执行文件路径名filename和定义数据传输方向的字符串type。该函数返回一个指向FILE数据结">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-12T12:04:29.000Z">
-<meta property="article:modified_time" content="2020-10-23T01:21:00.709Z">
+<meta property="article:modified_time" content="2020-10-25T04:49:42.802Z">
 <meta property="article:author" content="XQ">
 <meta property="article:tag" content="底层">
 <meta name="twitter:card" content="summary">
@@ -101,7 +101,7 @@
       <h1 class="site-title">青墨山音</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">再不学习就没书念了!</p>
+      <p class="site-subtitle" itemprop="description">众里寻他千百度,蓦然回首,那人却在灯火阑珊处</p>
   </div>
 
   <div class="site-nav-right">
@@ -158,7 +158,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="XQ">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="从今天起，做一个简单的人，踏实务实。不沉溺幻想，不庸人自扰。要快乐，要开朗，要坚韧，要温暖，对人要真诚。要诚恳，要坦然，要慷慨，要宽容，要有平常心。永远对生活充满希望，对于困境与磨难，微笑面对。多看书，看好书。少吃点，吃好点。要有梦想，即使遥远。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -183,7 +183,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-23 09:21:00" itemprop="dateModified" datetime="2020-10-23T09:21:00+08:00">2020-10-23</time>
+                <time title="Modified: 2020-10-25 12:49:42" itemprop="dateModified" datetime="2020-10-25T12:49:42+08:00">2020-10-25</time>
               </span>
 
           
@@ -197,10 +197,44 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="OS实验一：进程通信实验"><a href="#OS实验一：进程通信实验" class="headerlink" title="OS实验一：进程通信实验"></a>OS实验一：进程通信实验</h1><h2 id="一-消息传递"><a href="#一-消息传递" class="headerlink" title="一.消息传递"></a>一.消息传递</h2><p>消息队列是内核地址空间中的内部链表，通过Linux内核在各个进程之间传递内容，内核中的消息队列是通过IPC的标识符来区别的，不同的消息队列之间是相对独立的。</p>
-<p>每个消息队列中的消息又构成一个独立链表。</p>
-<p>消息队列提供了一个从一个进程向另一个进程发送数据块的方法。每个数据块都被认为含有一个类型，接收进程可以独立的接收含有不同类型的数据结构。</p>
-<p>我们可以通过发送消息来避免命名管道的同步和阻塞问题。但是消息队列与命名管道一样，每个数据块都有一个最大长度的限制，消息总的大小不能超过8192个字节。</p>
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef |grep - 列出需要进程</span><br></pre></td></tr></table></figure>
+
+<h1 id="OS实验一：进程通信实验"><a href="#OS实验一：进程通信实验" class="headerlink" title="OS实验一：进程通信实验"></a>OS实验一：进程通信实验</h1><h2 id="一-管道和FIFO-命名管道"><a href="#一-管道和FIFO-命名管道" class="headerlink" title="一.管道和FIFO/命名管道"></a>一.管道和FIFO/命名管道</h2><p>最适合在进程之间实现生产者/消费者的交互。有些进程往管道里写数据，而另一些进程则从管道中读出数据。</p>
+<p>在Linux中，popen()和pclose()都包含在C函数库中，popen()函数接收两个参数：可执行文件路径名filename和定义数据传输方向的字符串type。该函数返回一个指向FILE数据结构的指针。popen()函数实际执行以下操作：</p>
+<ol>
+<li>使用pipe()系统调用创建一个新管道</li>
+<li>创建一个新进程，该进程又要执行以下操作：<ul>
+<li>如果type是r，就把和该管道的写通道相关文件描述符拷贝到文件描述符1（标准输出）</li>
+<li>如果type是w，就把和该管道的读通道相关的文件描述符拷贝到文件描述符0（标准输入）</li>
+<li>关闭pipe()所返回的文件描述符</li>
+<li>调用execve()系统调用来执行filename所指定的程序</li>
+</ul>
+</li>
+<li>如果type是r，就关闭和该管道的写通道相关文件描述符，如果type是w，就关闭和该管道的读通道相关文件描述符。</li>
+<li>返回FILE文件指针所指向的地址，这个指针仍然指向仍然打开的管道所涉及的任意文件描述符。</li>
+</ol>
+<p>在popen()函数被调用之后，父进程和子进程就可以通过这个管道交换信息：父进程可以使用该函数所返回的FILE指针来读或写数据，子进程所执行的程序分别把输入写入标准输出或从标准输入读取数据。</p>
+<p>pclose()函数接受popen()所返回的文件指针作为参数，等待popen()所创建的进程结束。</p>
+<h3 id="管道数据结构"><a href="#管道数据结构" class="headerlink" title="管道数据结构"></a>管道数据结构</h3><h2 id="二-消息传递"><a href="#二-消息传递" class="headerlink" title="二.消息传递"></a>二.消息传递</h2><p>进程彼此之间可以通过IPC消息进行通信。进程产生的每个消息都被发送到一个IPC消息队列中，这个消息一直存放在队列中直到另一个进程将其读走为止。</p>
+<p>消息是由一个固定大小的首部header和一个可变长度的正文text组成的，可以使用一个整数值（消息类型）标识消息，这就允许进程有选择性的从消息队列中获取消息。只要进程从IPC消息队列中读出一个消息，内核就把这个消息删除。因此，一个进程只能接收一个给定的消息，</p>
+<p>为了发送一个消息，进程要调用msgsnd()函数，传递以下参数：</p>
+<ul>
+<li>目标消息队列的IPC标识符</li>
+<li>用户态缓冲区的地址，缓冲区中包含消息类型及消息正文</li>
+<li>消息正文的大小</li>
+</ul>
+<p>进程要获得一个消息就要调用msgrcv()函数，传递给它以下参数：</p>
+<ul>
+<li>IPC消息队列资源的IPC标识符</li>
+<li>指向用户态缓冲区的指针，消息类型和消息正文应该被拷贝到这个缓冲区</li>
+<li>该缓冲区的大小</li>
+<li>一个值t，指定应该获得什么消息<ul>
+<li>如果t的值是0，就返回队列中的第一个消息</li>
+<li>如果t的值是正数，就返回队列类型等于t的第一个消息</li>
+<li>如果t的值是负数，就返回消息类型小于等于t绝对值的最小的第一个消息</li>
+</ul>
+</li>
+</ul>
 <h2 id="二-共享内存"><a href="#二-共享内存" class="headerlink" title="二.共享内存"></a>二.共享内存</h2><h3 id="共享内存使用的函数"><a href="#共享内存使用的函数" class="headerlink" title="共享内存使用的函数"></a>共享内存使用的函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmget</span><span class="params">(<span class="keyword">key_t</span> key,<span class="keyword">size_t</span> size, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">shmat</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">const</span> <span class="keyword">void</span> *shm_addr, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmdt</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *shm_addr)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmctl</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">int</span> cmd, struct shmid_ds *buf)</span></span>;</span><br></pre></td></tr></table></figure>
 
 <ol>
@@ -261,8 +295,8 @@
       <i class="fa fa-chevron-left"></i> Maven
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/10/17/C/" rel="next" title="page">
-      page <i class="fa fa-chevron-right"></i>
+    <a href="/2020/10/17/C/" rel="next" title="C">
+      C <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -322,14 +356,14 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OS%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E5%AE%9E%E9%AA%8C"><span class="nav-number">1.</span> <span class="nav-text">OS实验一：进程通信实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92"><span class="nav-number">1.1.</span> <span class="nav-text">一.消息传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98"><span class="nav-number">1.2.</span> <span class="nav-text">二.共享内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">共享内存使用的函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CPU%E8%B0%83%E5%BA%A6%E6%A6%82%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">CPU调度概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#CPU%E8%B0%83%E5%BA%A6%E5%88%86%E4%B8%BA%E9%95%BF%E7%A8%8B%E8%B0%83%E5%BA%A6%E5%92%8C%E7%9F%AD%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="nav-number">2.0.0.0.0.1.</span> <span class="nav-text">CPU调度分为长程调度和短程调度</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%BF%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">长程调度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="nav-number">3.</span> <span class="nav-text">第六章 进程同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-1%E4%B8%B4%E7%95%8C%E5%8C%BA"><span class="nav-number">4.</span> <span class="nav-text">6.1临界区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%9E%E4%BA%89%E6%9D%A1%E4%BB%B6%E5%92%8C%E4%B8%B4%E7%95%8C%E5%8C%BA"><span class="nav-number">4.1.</span> <span class="nav-text">竞争条件和临界区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="nav-number">4.2.</span> <span class="nav-text">信号量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E9%97%AE%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">生产者消费问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E8%80%85%E5%86%99%E7%9D%80%E9%97%AE%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">读者写着问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.</span> <span class="nav-text">哲学家就餐问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%A8%8B"><span class="nav-number">4.6.</span> <span class="nav-text">管程</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OS%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E5%AE%9E%E9%AA%8C"><span class="nav-number">1.</span> <span class="nav-text">OS实验一：进程通信实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E7%AE%A1%E9%81%93%E5%92%8CFIFO-%E5%91%BD%E5%90%8D%E7%AE%A1%E9%81%93"><span class="nav-number">1.1.</span> <span class="nav-text">一.管道和FIFO&#x2F;命名管道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.1.</span> <span class="nav-text">管道数据结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92"><span class="nav-number">1.2.</span> <span class="nav-text">二.消息传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98"><span class="nav-number">1.3.</span> <span class="nav-text">二.共享内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.1.</span> <span class="nav-text">共享内存使用的函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CPU%E8%B0%83%E5%BA%A6%E6%A6%82%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">CPU调度概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#CPU%E8%B0%83%E5%BA%A6%E5%88%86%E4%B8%BA%E9%95%BF%E7%A8%8B%E8%B0%83%E5%BA%A6%E5%92%8C%E7%9F%AD%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="nav-number">2.0.0.0.0.1.</span> <span class="nav-text">CPU调度分为长程调度和短程调度</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%BF%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">长程调度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="nav-number">3.</span> <span class="nav-text">第六章 进程同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-1%E4%B8%B4%E7%95%8C%E5%8C%BA"><span class="nav-number">4.</span> <span class="nav-text">6.1临界区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%9E%E4%BA%89%E6%9D%A1%E4%BB%B6%E5%92%8C%E4%B8%B4%E7%95%8C%E5%8C%BA"><span class="nav-number">4.1.</span> <span class="nav-text">竞争条件和临界区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="nav-number">4.2.</span> <span class="nav-text">信号量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E9%97%AE%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">生产者消费问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E8%80%85%E5%86%99%E7%9D%80%E9%97%AE%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">读者写着问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.</span> <span class="nav-text">哲学家就餐问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%A8%8B"><span class="nav-number">4.6.</span> <span class="nav-text">管程</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">XQ</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">从今天起，做一个简单的人，踏实务实。不沉溺幻想，不庸人自扰。要快乐，要开朗，要坚韧，要温暖，对人要真诚。要诚恳，要坦然，要慷慨，要宽容，要有平常心。永远对生活充满希望，对于困境与磨难，微笑面对。多看书，看好书。少吃点，吃好点。要有梦想，即使遥远。</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">

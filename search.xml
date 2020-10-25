@@ -21,7 +21,11 @@
   <entry>
     <title>Django</title>
     <url>/2020/10/11/Django/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h6 id="Mac下上传代码到GitHub"><a href="#Mac下上传代码到GitHub" class="headerlink" title="Mac下上传代码到GitHub"></a>Mac下上传代码到GitHub</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">touch README.md //新建一个记录提交操作的文档</span><br><span class="line">git init //初始化本地仓库</span><br><span class="line">git add README.md //添加</span><br><span class="line">git add *  //加入所有项目</span><br><span class="line">git status //检查状态 如果都是绿的 证明成功</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span>//提交到要地仓库，并写一些注释</span><br><span class="line">git remote add origin git@github.com:youname/Test.git //连接远程仓库并建了一个名叫：origin的别名</span><br><span class="line">git push -u origin master //将本地仓库的东西提交到地址是origin的地址，master分支下</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
       <tags>
         <tag>Web</tag>
       </tags>
@@ -36,9 +40,9 @@
       </tags>
   </entry>
   <entry>
-    <title>page</title>
+    <title>C</title>
     <url>/2020/10/17/C/</url>
-    <content><![CDATA[<p>编译器：把源代码转换成可执行代码的程序</p>
+    <content><![CDATA[<h2 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础</h2><p>编译器：把源代码转换成可执行代码的程序</p>
 <p>可执行代码：用计算机的机器语言表示的代码，由数字码表示的指令组成</p>
 <p>C编译器负责把C代码翻译成特定的机器语言</p>
 <p>C编译器还将源代码与C库（库中包含大量的标准函数供用户使用，如printf和scanf）的代码合并成最终的程序，【精确说法：由一个被称为链接器的程序来链接库函数，但在大多数系统中，编译器运行链接器】结果是：生成一个用户可以运行的可执行文件，其中包含着计算机能理解的代码。</p>
@@ -50,16 +54,116 @@
 
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> c[] = <span class="string">&quot;I am a teacher&quot;</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(a,c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;c = %s\n&quot;</span>, c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %s\n&quot;</span>, a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">C语言里面复制字符串的库函数, 函数声明包括在专门处理字符串的头文件&lt;string.h&gt;中</span></span><br><span class="line"><span class="comment">char * strcpy( char * dst, const char * src );</span></span><br><span class="line"><span class="comment">这个函数把字符串src复制到一分配好的字符串空间dst中，复制的时候包括标志字符串结尾的空字符一起复制。</span></span><br><span class="line"><span class="comment">操作成功，返回dst，否则返回NULL.</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
-<p><a href="https://www.runoob.com/cprogramming/c-function-malloc.html">C 库函数 <strong>void *malloc(size_t size)</strong> 分配所需的内存空间，并返回一个指向它的指针。</a></p>
+<h2 id="查漏补缺"><a href="#查漏补缺" class="headerlink" title="查漏补缺"></a>查漏补缺</h2><h4 id="umask-0"><a href="#umask-0" class="headerlink" title="umask(0)"></a>umask(0)</h4><p>linux中的 umask 函数主要用于：在创建新文件或目录时 屏蔽掉新文件或目录不应有的访问允许权限。</p>
+<h4 id="goto-remove"><a href="#goto-remove" class="headerlink" title="goto remove;"></a>goto remove;</h4><h4 id="srand-unsigned-time-NULL"><a href="#srand-unsigned-time-NULL" class="headerlink" title="srand((unsigned)time(NULL))"></a>srand((unsigned)time(NULL))</h4><h6 id="——来完成产生随机数的功能"><a href="#——来完成产生随机数的功能" class="headerlink" title="——来完成产生随机数的功能"></a>——来完成产生随机数的功能</h6><p><a href="http://c.biancheng.net/view/2043.html">srand函数是随机数发生器的初始化函数</a></p>
+<p>rand() 函数产生的随机数是伪随机数，是根据一个数值按照某个公式推算出来的，这个数值我们称之为“种子”。</p>
+<p>种子在每次启动计算机时是随机的，但是一旦计算机启动以后它就不再变化了；也就是说，每次启动计算机以后，种子就是定值了，所以根据公式推算出来的结果（也就是生成的随机数）就是固定的。</p>
+<p>我们可以通过 srand() 函数来重新“播种”，这样种子就会发生改变。srand() 的用法为：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">srand</span> <span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> seed)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>它需要一个 unsigned int 类型的参数。在实际开发中，我们可以用时间作为参数，只要每次播种的时间不同，那么生成的种子就不同，最终的随机数也就不同。</p>
+<p>使用 &lt;time.h&gt; 头文件中的 time() 函数即可得到当前的时间（精确到秒），就像下面这样</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br></pre></td></tr></table></figure>
+
+<p>生成随机数之前先进行播种，多次运行程序，会发现每次生成的随机数都不一样了。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br><span class="line">    a = rand();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="int-main-void"><a href="#int-main-void" class="headerlink" title="int main(void)"></a>int main(void)</h4><p>C语言main函数的一种声明方式，表明这个main函数不带参数，但仍需要整数返回值</p>
+<h4 id="memset"><a href="#memset" class="headerlink" title="memset( )"></a>memset( )</h4><p><a href="https://www.runoob.com/cprogramming/c-function-memset.html">C 库函数 <strong>void *memset(void *str, int c, size_t n)</strong> 复制字符 <strong>c</strong>（一个无符号字符）到参数 <strong>str</strong> 所指向的字符串的前 <strong>n</strong> 个字符。</a></p>
+<h4 id="strncpy"><a href="#strncpy" class="headerlink" title="strncpy()"></a>strncpy()</h4><p><a href="https://www.runoob.com/cprogramming/c-function-strncpy.html">C 库函数 <strong>char *strncpy(char *dest, const char *src, size_t n)</strong> 把 <strong>src</strong> 所指向的字符串复制到 <strong>dest</strong>，最多复制 <strong>n</strong> 个字符。当 src 的长度小于 n 时，dest 的剩余部分将用空字节填充。</a></p>
+<h4 id="puts"><a href="#puts" class="headerlink" title="puts()"></a>puts()</h4><p>用来向标准输出设备（屏幕）输出字符串并换行，但也仅限于输出字符串，没有printf()功能强大</p>
+<h4 id="strncmp"><a href="#strncmp" class="headerlink" title="strncmp()"></a>strncmp()</h4><p><a href="https://www.runoob.com/cprogramming/c-function-strncmp.html">C 库函数 <strong>int strncmp(const char *str1, const char *str2, size_t n)</strong> 把 <strong>str1</strong> 和 <strong>str2</strong> 进行比较，最多比较前 <strong>n</strong> 个字节</a></p>
+<h4 id="fgets"><a href="#fgets" class="headerlink" title="fgets()"></a>fgets()</h4><p><a href="https://www.runoob.com/cprogramming/c-function-fgets.html">C 库函数 <strong>char *fgets(char *str, int n, FILE *stream)</strong> 从指定的流 stream 读取一行，并把它存储在 <strong>str</strong> 所指向的字符串内。当读取 <strong>(n-1)</strong> 个字符时，或者读取到换行符时，或者到达文件末尾时，它会停止</a></p>
+<p><strong>fgets(st,n,stdin)</strong> 中的 stdin 表示标准输入，一般是从输入设备如键盘的缓冲区输入</p>
+<h4 id="malloc"><a href="#malloc" class="headerlink" title="malloc()"></a>malloc()</h4><p><a href="https://www.runoob.com/cprogramming/c-function-malloc.html">C 库函数 <strong>void *malloc(size_t size)</strong> 分配所需的内存空间，并返回一个指向它的指针。</a></p>
+<h4 id="size-t-VS-ssize-t"><a href="#size-t-VS-ssize-t" class="headerlink" title="size_t VS. ssize_t"></a>size_t VS. ssize_t</h4><p>在stddef.h中定义</p>
+<h5 id="size-t"><a href="#size-t" class="headerlink" title="size_t"></a>size_t</h5><ul>
+<li>在32位架构中被定义为:</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="keyword">size_t</span>;<span class="comment">//4字节</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在64位架构中被定义为</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">size_t</span>;<span class="comment">//8字节</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>而int在不同架构下都是4字节，与size_t不同；</p>
+</li>
+<li><p>int为带符号数，size_t为无符号数</p>
+</li>
+<li><p><strong>size_t</strong>一般用来表示一种计数，比如有多少东西被拷贝等。例如：sizeof操作符的结果类型是size_t，该类型保证能容纳实现所建立的最大对象的字节大小。</p>
+</li>
+<li><p>它的意义大致是“适于计量内存中可容纳的数据项目个数的无符号整数类型”。</p>
+</li>
+<li><p>在数组下标和内存管理函数之类的地方广泛使用。</p>
+</li>
+</ul>
+<h5 id="ssize-t"><a href="#ssize-t" class="headerlink" title="ssize_t"></a>ssize_t</h5><ul>
+<li>在32位架构中被定义为：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> <span class="keyword">ssize_t</span>;<span class="comment">//4字节</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在64位架构中被定义为</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">ssize_t</span>;<span class="comment">//8字节</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>ssize_t是有符号整型</li>
+<li>在32位机器上等同与int，在64位机器上等同与long int.</li>
+<li>而<strong>ssize_t</strong>这个数据类型用来<strong>表示可以被执行读写操作的数据块的大小</strong>.它和size_t类似,但必需是signed.</li>
+<li>从字面上意思来说： ssize_t = signed size_t</li>
+</ul>
+<h4 id="C语言中宏定义的-define"><a href="#C语言中宏定义的-define" class="headerlink" title="C语言中宏定义的#define"></a>C语言中宏定义的#define</h4><p>1.简单的替换，如#define MAX 1024   在定义了这条指令后，指令后出现的MAX等效于1024，MAX在程序的预处理阶段被替换成1024。同理也可以进行文本替换如#define BBM BadBlockManage</p>
+<p>2、用简单的宏定义来替代一些函数，#define max(a,b) ((a&gt;b)?a:b)   该指令实现了两个数比较大小并返回最大值的功能，很多情况下一些简单的功能用宏定义比函数要方便</p>
 ]]></content>
   </entry>
   <entry>
     <title>OS</title>
     <url>/2020/10/12/OS/</url>
-    <content><![CDATA[<h1 id="OS实验一：进程通信实验"><a href="#OS实验一：进程通信实验" class="headerlink" title="OS实验一：进程通信实验"></a>OS实验一：进程通信实验</h1><h2 id="一-消息传递"><a href="#一-消息传递" class="headerlink" title="一.消息传递"></a>一.消息传递</h2><p>消息队列是内核地址空间中的内部链表，通过Linux内核在各个进程之间传递内容，内核中的消息队列是通过IPC的标识符来区别的，不同的消息队列之间是相对独立的。</p>
-<p>每个消息队列中的消息又构成一个独立链表。</p>
-<p>消息队列提供了一个从一个进程向另一个进程发送数据块的方法。每个数据块都被认为含有一个类型，接收进程可以独立的接收含有不同类型的数据结构。</p>
-<p>我们可以通过发送消息来避免命名管道的同步和阻塞问题。但是消息队列与命名管道一样，每个数据块都有一个最大长度的限制，消息总的大小不能超过8192个字节。</p>
+    <content><![CDATA[<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ps -ef |grep - 列出需要进程</span><br></pre></td></tr></table></figure>
+
+<h1 id="OS实验一：进程通信实验"><a href="#OS实验一：进程通信实验" class="headerlink" title="OS实验一：进程通信实验"></a>OS实验一：进程通信实验</h1><h2 id="一-管道和FIFO-命名管道"><a href="#一-管道和FIFO-命名管道" class="headerlink" title="一.管道和FIFO/命名管道"></a>一.管道和FIFO/命名管道</h2><p>最适合在进程之间实现生产者/消费者的交互。有些进程往管道里写数据，而另一些进程则从管道中读出数据。</p>
+<p>在Linux中，popen()和pclose()都包含在C函数库中，popen()函数接收两个参数：可执行文件路径名filename和定义数据传输方向的字符串type。该函数返回一个指向FILE数据结构的指针。popen()函数实际执行以下操作：</p>
+<ol>
+<li>使用pipe()系统调用创建一个新管道</li>
+<li>创建一个新进程，该进程又要执行以下操作：<ul>
+<li>如果type是r，就把和该管道的写通道相关文件描述符拷贝到文件描述符1（标准输出）</li>
+<li>如果type是w，就把和该管道的读通道相关的文件描述符拷贝到文件描述符0（标准输入）</li>
+<li>关闭pipe()所返回的文件描述符</li>
+<li>调用execve()系统调用来执行filename所指定的程序</li>
+</ul>
+</li>
+<li>如果type是r，就关闭和该管道的写通道相关文件描述符，如果type是w，就关闭和该管道的读通道相关文件描述符。</li>
+<li>返回FILE文件指针所指向的地址，这个指针仍然指向仍然打开的管道所涉及的任意文件描述符。</li>
+</ol>
+<p>在popen()函数被调用之后，父进程和子进程就可以通过这个管道交换信息：父进程可以使用该函数所返回的FILE指针来读或写数据，子进程所执行的程序分别把输入写入标准输出或从标准输入读取数据。</p>
+<p>pclose()函数接受popen()所返回的文件指针作为参数，等待popen()所创建的进程结束。</p>
+<h3 id="管道数据结构"><a href="#管道数据结构" class="headerlink" title="管道数据结构"></a>管道数据结构</h3><h2 id="二-消息传递"><a href="#二-消息传递" class="headerlink" title="二.消息传递"></a>二.消息传递</h2><p>进程彼此之间可以通过IPC消息进行通信。进程产生的每个消息都被发送到一个IPC消息队列中，这个消息一直存放在队列中直到另一个进程将其读走为止。</p>
+<p>消息是由一个固定大小的首部header和一个可变长度的正文text组成的，可以使用一个整数值（消息类型）标识消息，这就允许进程有选择性的从消息队列中获取消息。只要进程从IPC消息队列中读出一个消息，内核就把这个消息删除。因此，一个进程只能接收一个给定的消息，</p>
+<p>为了发送一个消息，进程要调用msgsnd()函数，传递以下参数：</p>
+<ul>
+<li>目标消息队列的IPC标识符</li>
+<li>用户态缓冲区的地址，缓冲区中包含消息类型及消息正文</li>
+<li>消息正文的大小</li>
+</ul>
+<p>进程要获得一个消息就要调用msgrcv()函数，传递给它以下参数：</p>
+<ul>
+<li>IPC消息队列资源的IPC标识符</li>
+<li>指向用户态缓冲区的指针，消息类型和消息正文应该被拷贝到这个缓冲区</li>
+<li>该缓冲区的大小</li>
+<li>一个值t，指定应该获得什么消息<ul>
+<li>如果t的值是0，就返回队列中的第一个消息</li>
+<li>如果t的值是正数，就返回队列类型等于t的第一个消息</li>
+<li>如果t的值是负数，就返回消息类型小于等于t绝对值的最小的第一个消息</li>
+</ul>
+</li>
+</ul>
 <h2 id="二-共享内存"><a href="#二-共享内存" class="headerlink" title="二.共享内存"></a>二.共享内存</h2><h3 id="共享内存使用的函数"><a href="#共享内存使用的函数" class="headerlink" title="共享内存使用的函数"></a>共享内存使用的函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmget</span><span class="params">(<span class="keyword">key_t</span> key,<span class="keyword">size_t</span> size, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">shmat</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">const</span> <span class="keyword">void</span> *shm_addr, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmdt</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *shm_addr)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmctl</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">int</span> cmd, struct shmid_ds *buf)</span></span>;</span><br></pre></td></tr></table></figure>
 
 <ol>
