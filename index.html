@@ -1,786 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="但行好事，莫问前程">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>青墨山音 - 众里寻他千百度,蓦然回首,那人却在灯火阑珊处</title><meta name="keywords" content="AI"><meta name="author" content="XQ"><meta name="copyright" content="XQ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="但行好事，莫问前程">
 <meta property="og:type" content="website">
 <meta property="og:title" content="青墨山音">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="青墨山音">
 <meta property="og:description" content="但行好事，莫问前程">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/null">
 <meta property="article:author" content="XQ">
 <meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>青墨山音</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="http://example.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-02-02 16:46:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="青墨山音" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">青墨山音</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">众里寻他千百度,蓦然回首,那人却在灯火阑珊处</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/17/C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XQ">
-      <meta itemprop="description" content="但行好事，莫问前程">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青墨山音">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/17/C/" class="post-title-link" itemprop="url">C</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-17 15:51:36" itemprop="dateCreated datePublished" datetime="2020-10-17T15:51:36+08:00">2020-10-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-25 18:27:16" itemprop="dateModified" datetime="2020-10-25T18:27:16+08:00">2020-10-25</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础</h2><p>编译器：把源代码转换成可执行代码的程序</p>
-<p>可执行代码：用计算机的机器语言表示的代码，由数字码表示的指令组成</p>
-<p>C编译器负责把C代码翻译成特定的机器语言</p>
-<p>C编译器还将源代码与C库（库中包含大量的标准函数供用户使用，如printf和scanf）的代码合并成最终的程序，【精确说法：由一个被称为链接器的程序来链接库函数，但在大多数系统中，编译器运行链接器】结果是：生成一个用户可以运行的可执行文件，其中包含着计算机能理解的代码。</p>
-<p>编译器还会检查C语言程序是否有效，如果C编译器发现错误，就不生成可执行文件并报错。</p>
-<p>C编程的基本策略是：用程序把源代码文件转换为可执行文件；典型的C实现通过编译和链接两个步骤来完成这一过程。编译器把源代码转换成中间代码，链接器把中间代码和其他代码合并，生成可执行文件。                                                                                   </p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; //包含另一个文件，告诉编译器把stdio.h中的内容包含在当前程序中，</span></span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">stdio.h是C编译器软件包的标准部分，提供键盘输入和屏幕输出的支持</span></span><br><span class="line"><span class="comment">作用：相当于把stdio.h文件中的所有内容都输入该行所在的位置；实际上这是一种拷贝-粘贴的操作，include提供了一种方便的途径共享许多程序共有的信息</span></span><br><span class="line"><span class="comment">这行代码是一条C预处理器指令，通常C编译器在编译前会对源代码做一些准备工作，即预处理</span></span><br><span class="line"><span class="comment">大多数情况下，头文件包含了编译器创建最终可执行程序要用到的信息，头文件帮助编译器把你的程序正确的组合在一起</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">函数是C程序的基本模块</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="comment">/*在C语言中，所有变量必须先声明才能使用，即必须列出程序中用到的所有变量名及类型*/</span></span><br><span class="line">  <span class="keyword">int</span> num;<span class="comment">//声明</span></span><br><span class="line">  num = <span class="number">1</span>;<span class="comment">//赋值表达式语句</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;I am a simple&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;computer.\n&quot;</span>);<span class="comment">//&quot;\n&quot;告诉计算机另起一行，即把光标移至下一行</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;my favorite color is %d because it is first.\n&quot;</span>, num);<span class="comment">//“%d”告诉计算机以何种形式输出num的值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> weight;</span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Are you worth your weight in plantinum?\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;let&#x27; s check it out!\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter your weight in pounds: &quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;weight);</span><br><span class="line">  	<span class="comment">/*</span></span><br><span class="line"><span class="comment">  	scanf函数用于读取键盘的输入，“%f”说明读取用户从键盘输入的浮点数，&amp;weight告诉scanf()把输入的值赋给名为weight的变量。使用&amp;符号表明找到weight变量的地点。</span></span><br><span class="line"><span class="comment">  	*/</span></span><br><span class="line"></span><br><span class="line">    value = <span class="number">1700.0</span> * weight * <span class="number">14.5833</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Your weight in plantium is worth $%.2f.\n&quot;</span>, value);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">getchar()函数读取下一个输入字符，因此程序会等待用户输入，</span></span><br><span class="line"><span class="comment">用户键入156并按下enter键（即发送一个换行符）</span></span><br><span class="line"><span class="comment">然后scanf()读取键入的数字，第一个getchar()读取换行符，第二个getchar()让程序暂停，等待输入</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> c[] = <span class="string">&quot;I am a teacher&quot;</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(a,c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;c = %s\n&quot;</span>, c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %s\n&quot;</span>, a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">C语言里面复制字符串的库函数, 函数声明包括在专门处理字符串的头文件&lt;string.h&gt;中</span></span><br><span class="line"><span class="comment">char * strcpy( char * dst, const char * src );</span></span><br><span class="line"><span class="comment">这个函数把字符串src复制到一分配好的字符串空间dst中，复制的时候包括标志字符串结尾的空字符一起复制。</span></span><br><span class="line"><span class="comment">操作成功，返回dst，否则返回NULL.</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="查漏补缺"><a href="#查漏补缺" class="headerlink" title="查漏补缺"></a>查漏补缺</h2><h4 id="umask-0"><a href="#umask-0" class="headerlink" title="umask(0)"></a>umask(0)</h4><p>linux中的 umask 函数主要用于：在创建新文件或目录时 屏蔽掉新文件或目录不应有的访问允许权限。</p>
-<h4 id="goto-remove"><a href="#goto-remove" class="headerlink" title="goto remove;"></a>goto remove;</h4><h4 id="srand-unsigned-time-NULL"><a href="#srand-unsigned-time-NULL" class="headerlink" title="srand((unsigned)time(NULL))"></a>srand((unsigned)time(NULL))</h4><h6 id="——来完成产生随机数的功能"><a href="#——来完成产生随机数的功能" class="headerlink" title="——来完成产生随机数的功能"></a>——来完成产生随机数的功能</h6><p><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/2043.html">srand函数是随机数发生器的初始化函数</a></p>
-<p>rand() 函数产生的随机数是伪随机数，是根据一个数值按照某个公式推算出来的，这个数值我们称之为“种子”。</p>
-<p>种子在每次启动计算机时是随机的，但是一旦计算机启动以后它就不再变化了；也就是说，每次启动计算机以后，种子就是定值了，所以根据公式推算出来的结果（也就是生成的随机数）就是固定的。</p>
-<p>我们可以通过 srand() 函数来重新“播种”，这样种子就会发生改变。srand() 的用法为：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">srand</span> <span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> seed)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>它需要一个 unsigned int 类型的参数。在实际开发中，我们可以用时间作为参数，只要每次播种的时间不同，那么生成的种子就不同，最终的随机数也就不同。</p>
-<p>使用 &lt;time.h&gt; 头文件中的 time() 函数即可得到当前的时间（精确到秒），就像下面这样</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br></pre></td></tr></table></figure>
-
-<p>生成随机数之前先进行播种，多次运行程序，会发现每次生成的随机数都不一样了。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br><span class="line">    a = rand();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="int-main-void"><a href="#int-main-void" class="headerlink" title="int main(void)"></a>int main(void)</h4><p>C语言main函数的一种声明方式，表明这个main函数不带参数，但仍需要整数返回值</p>
-<h4 id="memset"><a href="#memset" class="headerlink" title="memset( )"></a>memset( )</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-memset.html">C 库函数 <strong>void *memset(void *str, int c, size_t n)</strong> 复制字符 <strong>c</strong>（一个无符号字符）到参数 <strong>str</strong> 所指向的字符串的前 <strong>n</strong> 个字符。</a></p>
-<h4 id="strncpy"><a href="#strncpy" class="headerlink" title="strncpy()"></a>strncpy()</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-strncpy.html">C 库函数 <strong>char *strncpy(char *dest, const char *src, size_t n)</strong> 把 <strong>src</strong> 所指向的字符串复制到 <strong>dest</strong>，最多复制 <strong>n</strong> 个字符。当 src 的长度小于 n 时，dest 的剩余部分将用空字节填充。</a></p>
-<h4 id="puts"><a href="#puts" class="headerlink" title="puts()"></a>puts()</h4><p>用来向标准输出设备（屏幕）输出字符串并换行，但也仅限于输出字符串，没有printf()功能强大</p>
-<h4 id="strncmp"><a href="#strncmp" class="headerlink" title="strncmp()"></a>strncmp()</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-strncmp.html">C 库函数 <strong>int strncmp(const char *str1, const char *str2, size_t n)</strong> 把 <strong>str1</strong> 和 <strong>str2</strong> 进行比较，最多比较前 <strong>n</strong> 个字节</a></p>
-<h4 id="fgets"><a href="#fgets" class="headerlink" title="fgets()"></a>fgets()</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-fgets.html">C 库函数 <strong>char *fgets(char *str, int n, FILE *stream)</strong> 从指定的流 stream 读取一行，并把它存储在 <strong>str</strong> 所指向的字符串内。当读取 <strong>(n-1)</strong> 个字符时，或者读取到换行符时，或者到达文件末尾时，它会停止</a></p>
-<p><strong>fgets(st,n,stdin)</strong> 中的 stdin 表示标准输入，一般是从输入设备如键盘的缓冲区输入</p>
-<h4 id="malloc"><a href="#malloc" class="headerlink" title="malloc()"></a>malloc()</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-malloc.html">C 库函数 <strong>void *malloc(size_t size)</strong> 分配所需的内存空间，并返回一个指向它的指针。</a></p>
-<h4 id="size-t-VS-ssize-t"><a href="#size-t-VS-ssize-t" class="headerlink" title="size_t VS. ssize_t"></a>size_t VS. ssize_t</h4><p>在stddef.h中定义</p>
-<h5 id="size-t"><a href="#size-t" class="headerlink" title="size_t"></a>size_t</h5><ul>
-<li>在32位架构中被定义为:</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="keyword">size_t</span>;<span class="comment">//4字节</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在64位架构中被定义为</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">size_t</span>;<span class="comment">//8字节</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>而int在不同架构下都是4字节，与size_t不同；</p>
-</li>
-<li><p>int为带符号数，size_t为无符号数</p>
-</li>
-<li><p><strong>size_t</strong>一般用来表示一种计数，比如有多少东西被拷贝等。例如：sizeof操作符的结果类型是size_t，该类型保证能容纳实现所建立的最大对象的字节大小。</p>
-</li>
-<li><p>它的意义大致是“适于计量内存中可容纳的数据项目个数的无符号整数类型”。</p>
-</li>
-<li><p>在数组下标和内存管理函数之类的地方广泛使用。</p>
-</li>
-</ul>
-<h5 id="ssize-t"><a href="#ssize-t" class="headerlink" title="ssize_t"></a>ssize_t</h5><ul>
-<li>在32位架构中被定义为：</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> <span class="keyword">ssize_t</span>;<span class="comment">//4字节</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在64位架构中被定义为</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">ssize_t</span>;<span class="comment">//8字节</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>ssize_t是有符号整型</li>
-<li>在32位机器上等同与int，在64位机器上等同与long int.</li>
-<li>而<strong>ssize_t</strong>这个数据类型用来<strong>表示可以被执行读写操作的数据块的大小</strong>.它和size_t类似,但必需是signed.</li>
-<li>从字面上意思来说： ssize_t = signed size_t</li>
-</ul>
-<h4 id="C语言中宏定义的-define"><a href="#C语言中宏定义的-define" class="headerlink" title="C语言中宏定义的#define"></a>C语言中宏定义的#define</h4><p>1.简单的替换，如#define MAX 1024   在定义了这条指令后，指令后出现的MAX等效于1024，MAX在程序的预处理阶段被替换成1024。同理也可以进行文本替换如#define BBM BadBlockManage</p>
-<p>2、用简单的宏定义来替代一些函数，#define max(a,b) ((a&gt;b)?a:b)   该指令实现了两个数比较大小并返回最大值的功能，很多情况下一些简单的功能用宏定义比函数要方便</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/12/OS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XQ">
-      <meta itemprop="description" content="但行好事，莫问前程">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青墨山音">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/12/OS/" class="post-title-link" itemprop="url">OS</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-12 20:04:29" itemprop="dateCreated datePublished" datetime="2020-10-12T20:04:29+08:00">2020-10-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-25 12:49:42" itemprop="dateModified" datetime="2020-10-25T12:49:42+08:00">2020-10-25</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef |grep - 列出需要进程</span><br></pre></td></tr></table></figure>
-
-<h1 id="OS实验一：进程通信实验"><a href="#OS实验一：进程通信实验" class="headerlink" title="OS实验一：进程通信实验"></a>OS实验一：进程通信实验</h1><h2 id="一-管道和FIFO-命名管道"><a href="#一-管道和FIFO-命名管道" class="headerlink" title="一.管道和FIFO/命名管道"></a>一.管道和FIFO/命名管道</h2><p>最适合在进程之间实现生产者/消费者的交互。有些进程往管道里写数据，而另一些进程则从管道中读出数据。</p>
-<p>在Linux中，popen()和pclose()都包含在C函数库中，popen()函数接收两个参数：可执行文件路径名filename和定义数据传输方向的字符串type。该函数返回一个指向FILE数据结构的指针。popen()函数实际执行以下操作：</p>
-<ol>
-<li>使用pipe()系统调用创建一个新管道</li>
-<li>创建一个新进程，该进程又要执行以下操作：<ul>
-<li>如果type是r，就把和该管道的写通道相关文件描述符拷贝到文件描述符1（标准输出）</li>
-<li>如果type是w，就把和该管道的读通道相关的文件描述符拷贝到文件描述符0（标准输入）</li>
-<li>关闭pipe()所返回的文件描述符</li>
-<li>调用execve()系统调用来执行filename所指定的程序</li>
-</ul>
-</li>
-<li>如果type是r，就关闭和该管道的写通道相关文件描述符，如果type是w，就关闭和该管道的读通道相关文件描述符。</li>
-<li>返回FILE文件指针所指向的地址，这个指针仍然指向仍然打开的管道所涉及的任意文件描述符。</li>
-</ol>
-<p>在popen()函数被调用之后，父进程和子进程就可以通过这个管道交换信息：父进程可以使用该函数所返回的FILE指针来读或写数据，子进程所执行的程序分别把输入写入标准输出或从标准输入读取数据。</p>
-<p>pclose()函数接受popen()所返回的文件指针作为参数，等待popen()所创建的进程结束。</p>
-<h3 id="管道数据结构"><a href="#管道数据结构" class="headerlink" title="管道数据结构"></a>管道数据结构</h3><h2 id="二-消息传递"><a href="#二-消息传递" class="headerlink" title="二.消息传递"></a>二.消息传递</h2><p>进程彼此之间可以通过IPC消息进行通信。进程产生的每个消息都被发送到一个IPC消息队列中，这个消息一直存放在队列中直到另一个进程将其读走为止。</p>
-<p>消息是由一个固定大小的首部header和一个可变长度的正文text组成的，可以使用一个整数值（消息类型）标识消息，这就允许进程有选择性的从消息队列中获取消息。只要进程从IPC消息队列中读出一个消息，内核就把这个消息删除。因此，一个进程只能接收一个给定的消息，</p>
-<p>为了发送一个消息，进程要调用msgsnd()函数，传递以下参数：</p>
-<ul>
-<li>目标消息队列的IPC标识符</li>
-<li>用户态缓冲区的地址，缓冲区中包含消息类型及消息正文</li>
-<li>消息正文的大小</li>
-</ul>
-<p>进程要获得一个消息就要调用msgrcv()函数，传递给它以下参数：</p>
-<ul>
-<li>IPC消息队列资源的IPC标识符</li>
-<li>指向用户态缓冲区的指针，消息类型和消息正文应该被拷贝到这个缓冲区</li>
-<li>该缓冲区的大小</li>
-<li>一个值t，指定应该获得什么消息<ul>
-<li>如果t的值是0，就返回队列中的第一个消息</li>
-<li>如果t的值是正数，就返回队列类型等于t的第一个消息</li>
-<li>如果t的值是负数，就返回消息类型小于等于t绝对值的最小的第一个消息</li>
-</ul>
-</li>
-</ul>
-<h2 id="二-共享内存"><a href="#二-共享内存" class="headerlink" title="二.共享内存"></a>二.共享内存</h2><h3 id="共享内存使用的函数"><a href="#共享内存使用的函数" class="headerlink" title="共享内存使用的函数"></a>共享内存使用的函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmget</span><span class="params">(<span class="keyword">key_t</span> key,<span class="keyword">size_t</span> size, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">shmat</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">const</span> <span class="keyword">void</span> *shm_addr, <span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmdt</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *shm_addr)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">shmctl</span><span class="params">(<span class="keyword">int</span> shm_id, <span class="keyword">int</span> cmd, struct shmid_ds *buf)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>int shmget(key_t <strong>key</strong>,size_t <strong>size</strong>, int <strong>shmflg</strong>);<ul>
-<li><strong>key</strong>：和信号量一样，程序需要提供一个参数key，它有效的为共享内存段命名。</li>
-<li><strong>size</strong>：以字节为单位指定需要共享的内存容量</li>
-<li><strong>shmflg</strong>：</li>
-</ul>
-</li>
-</ol>
-<h1 id="CPU调度概述"><a href="#CPU调度概述" class="headerlink" title="CPU调度概述"></a>CPU调度概述</h1><p>多任务操作系统的基础，目的是使得CPU尽可能用于执行指令，从而提高CPU效率</p>
-<ol>
-<li>长程和短程调度</li>
-<li>调度队列</li>
-<li>中程调度</li>
-<li>CPU脉冲周期</li>
-<li>调度方式</li>
-<li>调度过程和时机</li>
-<li>调度准则</li>
-</ol>
-<h6 id="CPU调度分为长程调度和短程调度"><a href="#CPU调度分为长程调度和短程调度" class="headerlink" title="CPU调度分为长程调度和短程调度"></a>CPU调度分为长程调度和短程调度</h6><p>运行状态图中，有些状态的转换时必然的：运行状态完成的状态必然转换为结束状态，而有些状态的转换需要CPU的干预，因为进程间存在着一定的竞争，需要OS<strong>选择</strong>一个进程来进行这种转换，这种选择称为CPU调度。</p>
-<h2 id="长程调度"><a href="#长程调度" class="headerlink" title="长程调度"></a>长程调度</h2><p>“道”：允许在内存中运行的最多进程数</p>
-<p>由于CPU内存的硬件资源和性能是有限的，运行在其上的进程不能无限大</p>
-<p>并不是每个用户创建的进程都能够马上被装入内存并运行</p>
-<p>![image-20201014203834953](/Users/xueqi/Library/Application Support/typora-user-images/image-20201014203834953.png)</p>
-<p>![image-20201014212435127](/Users/xueqi/Library/Application Support/typora-user-images/image-20201014212435127.png)</p>
-<p>![image-20201014223842281](/Users/xueqi/Library/Application Support/typora-user-images/image-20201014223842281.png)</p>
-<p>![image-20201015101544648](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015101544648.png)</p>
-<p>![image-20201015112301870](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015112301870.png)</p>
-<p>![image-20201015113500787](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015113500787.png)</p>
-<p>![image-20201015125801021](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015125801021.png)</p>
-<p>![image-20201015211058475](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015211058475.png)</p>
-<p>![image-20201015214900528](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015214900528.png)</p>
-<p>![image-20201015220813553](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015220813553.png)</p>
-<p>![image-20201015234239536](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015234239536.png)</p>
-<p>![image-20201015235207708](/Users/xueqi/Library/Application Support/typora-user-images/image-20201015235207708.png)</p>
-<h1 id="第六章-进程同步"><a href="#第六章-进程同步" class="headerlink" title="第六章 进程同步"></a>第六章 进程同步</h1><h1 id="6-1临界区"><a href="#6-1临界区" class="headerlink" title="6.1临界区"></a>6.1临界区</h1><p>多道程序设计技术是现代操作系统运行的基础，在进程并发执行时，各个协通进程运行次序的不同会导致不同的运行结果，从而出现运行错误。</p>
-<p>同步和互斥技术保证在并发条件下进程运行的正确，一致性</p>
-<h2 id="竞争条件和临界区"><a href="#竞争条件和临界区" class="headerlink" title="竞争条件和临界区"></a>竞争条件和临界区</h2><h2 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h2><h2 id="生产者消费问题"><a href="#生产者消费问题" class="headerlink" title="生产者消费问题"></a>生产者消费问题</h2><h2 id="读者写着问题"><a href="#读者写着问题" class="headerlink" title="读者写着问题"></a>读者写着问题</h2><h2 id="哲学家就餐问题"><a href="#哲学家就餐问题" class="headerlink" title="哲学家就餐问题"></a>哲学家就餐问题</h2><h2 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/11/Maven/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XQ">
-      <meta itemprop="description" content="但行好事，莫问前程">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青墨山音">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/11/Maven/" class="post-title-link" itemprop="url">Maven</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-10-11 20:19:49 / Modified: 20:25:14" itemprop="dateCreated datePublished" datetime="2020-10-11T20:19:49+08:00">2020-10-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xxaann/article/details/104794669">jar包问题</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/11/Django/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XQ">
-      <meta itemprop="description" content="但行好事，莫问前程">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青墨山音">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/11/Django/" class="post-title-link" itemprop="url">Django</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-11 14:10:58" itemprop="dateCreated datePublished" datetime="2020-10-11T14:10:58+08:00">2020-10-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-24 16:12:54" itemprop="dateModified" datetime="2020-10-24T16:12:54+08:00">2020-10-24</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h6 id="Mac下上传代码到GitHub"><a href="#Mac下上传代码到GitHub" class="headerlink" title="Mac下上传代码到GitHub"></a>Mac下上传代码到GitHub</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">touch README.md //新建一个记录提交操作的文档</span><br><span class="line">git init //初始化本地仓库</span><br><span class="line">git add README.md //添加</span><br><span class="line">git add *  //加入所有项目</span><br><span class="line">git status //检查状态 如果都是绿的 证明成功</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span>//提交到要地仓库，并写一些注释</span><br><span class="line">git remote add origin git@github.com:youname/Test.git //连接远程仓库并建了一个名叫：origin的别名</span><br><span class="line">git push -u origin master //将本地仓库的东西提交到地址是origin的地址，master分支下</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XQ">
-      <meta itemprop="description" content="但行好事，莫问前程">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青墨山音">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/03/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-03 21:12:33" itemprop="dateCreated datePublished" datetime="2020-10-03T21:12:33+08:00">2020-10-03</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">XQ</p>
-  <div class="site-description" itemprop="description">但行好事，莫问前程</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <span class="site-state-item-count">5</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="青墨山音" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">青墨山音</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">青墨山音</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/27/Python/" title="Python">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/27/Python/" title="Python">Python</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-10-27T06:05:34.000Z" title="Created 2020-10-27 14:05:34">2020-10-27</time></span></div><div class="content">Python基础/与//的区别：
+/是除法，如2/3=0.6666，返回浮点类型
+//是向下取整的除法，如3//2=1，6.0//4=1，返回整数类型
+
+eval()执行一个字符串表达式，并返回表达式的值理解
+
+in：eval(“3+5”)
+out：21
+
+可以将字符串形式的列表、字典、元组分别转换为列表、字典、元组，eg：
+12345678910111213141516a = &quot;[[1,2], [3,4], [5,6], [7,8], [9,0]]&quot;b = eval(a)bOut[3]: [[1, 2], [3, 4], [5, 6], [7, 8], [9, 0]]type(b)Out[4]: lista = &quot;&#123;1: &#x27;a&#x27;, 2: &#x27;b&#x27;&#125;&quot;b = eval(a)bOut[7]: &#123;1: &#x27;a&#x27;, 2: &#x27;b&#x27;&#125;type(b)Out[8]: dicta = &quot;([1,2], [3,4], [5,6], [7,8 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/17/C/" title="C">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/17/C/" title="C">C</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-10-17T07:51:36.000Z" title="Created 2020-10-17 15:51:36">2020-10-17</time></span></div><div class="content">C语言基础编译器：把源代码转换成可执行代码的程序
+可执行代码：用计算机的机器语言表示的代码，由数字码表示的指令组成
+C编译器负责把C代码翻译成特定的机器语言
+C编译器还将源代码与C库（库中包含大量的标准函数供用户使用，如printf和scanf）的代码合并成最终的程序，【精确说法：由一个被称为链接器的程序来链接库函数，但在大多数系统中，编译器运行链接器】结果是：生成一个用户可以运行的可执行文件，其中包含着计算机能理解的代码。
+编译器还会检查C语言程序是否有效，如果C编译器发现错误，就不生成可执行文件并报错。
+C编程的基本策略是：用程序把源代码文件转换为可执行文件；典型的C实现通过编译和链接两个步骤来完成这一过程。编译器把源代码转换成中间代码，链接器把中间代码和其他代码合并，生成可执行文件。                                                                                   
+1234567891011121314151617181920#include &lt;stdio.h&gt; //包含另一个文件，告 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/12/OS/" title="OS">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/12/OS/" title="OS">OS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-10-12T12:04:29.000Z" title="Created 2020-10-12 20:04:29">2020-10-12</time></span></div><div class="content">1ps -ef |grep - 列出需要进程
+
+思维导图![image-20201208132824117](/Users/xueqi/Library/Application Support/typora-user-images/image-20201208132824117.png)
+OS实验一：进程通信实验一.管道和FIFO/命名管道最适合在进程之间实现生产者/消费者的交互。有些进程往管道里写数据，而另一些进程则从管道中读出数据。
+在Linux中，popen()和pclose()都包含在C函数库中，popen()函数接收两个参数：可执行文件路径名filename和定义数据传输方向的字符串type。该函数返回一个指向FILE数据结构的指针。popen()函数实际执行以下操作：
+
+使用pipe()系统调用创建一个新管道
+创建一个新进程，该进程又要执行以下操作：
+如果type是r，就把和该管道的写通道相关文件描述符拷贝到文件描述符1（标准输出）
+如果type是w，就把和该管道的读通道相关的文件描述符拷贝到文件描述符0（标准输入）
+关闭pipe()所返回的文件描述符
+调用execve()系 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/10/11/Maven/" title="Maven">Maven</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-10-11T12:19:49.000Z" title="Created 2020-10-11 20:19:49">2020-10-11</time></span></div><div class="content">jar包问题
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/10/11/Django/" title="Django">Django</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-10-11T06:10:58.000Z" title="Created 2020-10-11 14:10:58">2020-10-11</time></span></div><div class="content">Mac下上传代码到GitHub12345678touch README.md //新建一个记录提交操作的文档git init //初始化本地仓库git add README.md //添加git add *  //加入所有项目git status //检查状态 如果都是绿的 证明成功git commit -m &quot;first commit&quot;//提交到要地仓库，并写一些注释git remote add origin git@github.com:youname/Test.git //连接远程仓库并建了一个名叫：origin的别名git push -u origin master //将本地仓库的东西提交到地址是origin的地址，master分支下
 
 
 
-      </div>
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/10/03/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-10-03T13:12:33.205Z" title="Created 2020-10-03 21:12:33">2020-10-03</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+More info: Writing
+Run server1$ hexo server
 
+More info: Server
+Generate static files1$ hexo generate
 
-      </div>
-    </main>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">XQ</span>
-</div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">XQ</div><div class="author-info__description">但行好事，莫问前程</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/10/27/Python/" title="Python"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python"/></a><div class="content"><a class="title" href="/2020/10/27/Python/" title="Python">Python</a><time datetime="2020-10-27T06:05:34.000Z" title="Created 2020-10-27 14:05:34">2020-10-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/17/C/" title="C"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C"/></a><div class="content"><a class="title" href="/2020/10/17/C/" title="C">C</a><time datetime="2020-10-17T07:51:36.000Z" title="Created 2020-10-17 15:51:36">2020-10-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/12/OS/" title="OS"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS"/></a><div class="content"><a class="title" href="/2020/10/12/OS/" title="OS">OS</a><time datetime="2020-10-12T12:04:29.000Z" title="Created 2020-10-12 20:04:29">2020-10-12</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/10/11/Maven/" title="Maven">Maven</a><time datetime="2020-10-11T12:19:49.000Z" title="Created 2020-10-11 20:19:49">2020-10-11</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/10/11/Django/" title="Django">Django</a><time datetime="2020-10-11T06:10:58.000Z" title="Created 2020-10-11 14:10:58">2020-10-11</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Web/" style="font-size: 1.5em; color: #99a9bf">Web</a> <a href="/tags/%E5%BA%95%E5%B1%82/" style="font-size: 1.1em; color: #999">底层</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">October 2020</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-02-02T08:46:31.042Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By XQ</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
